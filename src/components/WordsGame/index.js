@@ -4,7 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Confetti from "react-confetti";
 import "./index.css";
 
-const WORD_LIST = ["APPLE", "MANGO", "GRAPE", "BANAN", "PEACH"];
+const WORD_LIST = ["KEDAR", "RAHUL", "TARUN", "APPLE", "PEACH"];
 const TARGET_WORD = WORD_LIST[Math.floor(Math.random() * WORD_LIST.length)];
 
 class WordsGame extends Component {
