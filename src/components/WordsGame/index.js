@@ -68,7 +68,13 @@ class WordsGame extends Component {
   };
 
   handleReset = () => {
-    window.location.reload();
+    this.setState((prevState) => ({
+      guesses: [],
+      input: "",
+      gameOver: false,
+      win: false,
+      darkMode: prevState.darkMode,
+    }));
   };
 
   toggleDarkMode = () => {
