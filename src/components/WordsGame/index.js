@@ -13,12 +13,15 @@ class WordsGame extends Component {
     input: "",
     gameOver: false,
     win: false,
-    darkMode: false,
+    darkMode: localStorage.getItem("darkMode") === "true",
     windowWidth: window.innerWidth,
     windowHeight: window.innerHeight,
   };
 
   componentDidMount() {
+    if (this.state.darkMode) {
+      document.body.classList.add("dark");
+    }
     window.addEventListener("resize", this.updateWindowSize);
   }
 
@@ -80,6 +83,7 @@ class WordsGame extends Component {
   toggleDarkMode = () => {
     this.setState((prevState) => {
       const newDarkMode = !prevState.darkMode;
+      localStorage.setItem("darkMode", newDarkMode);
       document.body.classList.toggle("dark", newDarkMode);
       return { darkMode: newDarkMode };
     });
@@ -173,3 +177,4 @@ class WordsGame extends Component {
 }
 
 export default WordsGame;
+          
