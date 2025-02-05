@@ -156,10 +156,10 @@ class WordsGame extends Component {
         {gameOver && (
           <div className="game-status">
             {win ? (
-              <p className="win-para">🎉 You Win! The word was {TARGET_WORD}</p>
+              <p className="win-para">🎉 You Win! The word is {TARGET_WORD}</p>
             ) : (
               <p className="loose-para">
-                ❌ Game Over! The word was {TARGET_WORD}
+                ❌ Game Over! The word is {TARGET_WORD}
               </p>
             )}
             <button onClick={this.handleReset} className="new-game-btn">
